@@ -16,6 +16,7 @@ function SlideShow(elements_selector) {
   this.elements = document.querySelectorAll(elements_selector);
   this.count = this.elements.length;
   this.current = 0;
+  this.playing = false;
 
   this.nextItem = function() {
     this.elements[this.current].className = "inactive";
@@ -38,12 +39,14 @@ function SlideShow(elements_selector) {
   }
 
   this.play = function() {
+    this.playing = true;
     this.player = setInterval(function(that) {
       that.nextItem();
     }, 5000, this);
   }
 
   this.pause = function() {
+    this.playing = false;
     clearInterval(this.player);
   }
 

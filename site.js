@@ -36,6 +36,17 @@ function SlideShow(elements_selector) {
   this.currItem = function() {
     this.elements[this.current].className = "active";
   }
+
+  this.play = function() {
+    this.player = setInterval(function(that) {
+      that.nextItem();
+    }, 5000, this);
+  }
+
+  this.pause = function() {
+    clearInterval(this.player);
+  }
+
 }
 
 

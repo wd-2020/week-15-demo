@@ -41,6 +41,20 @@ img {
 }
 
 /* State Styles */
+
+.js .slides {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.js .slides li {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  opacity: 0;
+}
+.js .slides li.active {
+  opacity: 1;
+}
+
 @media screen and (min-width: 790px) {
   .slides figure {
     display: grid;

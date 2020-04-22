@@ -9,14 +9,50 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Begin site styles below */
 
 html {
+  background: #c1bab0;
   font-family: Verdana, sans-serif;
+  font-size: 1.125em; /* 18 / 16 = 1.125em */
+  line-height: 1.3333333333em; /* 24 / 18 = 1.3333333333em */
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 1.3333333333em;
+  line-height: 1.5em; /* 36 / 24 = 1.5em */
+  padding-bottom: 0.5em; /* 12 / 24 = 0.5em */
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+/* Layout */
+#slideshow {
+  padding: 0.6666666667em; /* 12 / 18 = 0.6666666667em */
+}
+
+/* Modular Styles */
+.slides li {
+  margin-bottom: 1.3333333333em; /* 24 / 18 = 1.3333333333em */
+}
+
+.slides img {
+  border: 1px solid #222;
+}
+
+/* State Styles */
+@media screen and (min-width: 790px) {
+  .slides figure {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-column-gap: 1.3333333333em; /* 24 / 18 = 1.3333333333em */
+  }
+  .slides figure img {
+    grid-column: 1 / 6;
+  }
+  .slides figure figcaption {
+    grid-column: 6 / 8;
+    align-self: end;
+    padding-bottom: 0.6666666667em; /* 12 / 18 */
+  }
 }

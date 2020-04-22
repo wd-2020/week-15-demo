@@ -1,5 +1,7 @@
 document.querySelector('html').className = "js";
 
+// Code example for you to study!
+/*
 function FancyArray(arr) {
   this.arr = arr;
   this.count = this.arr.length;
@@ -27,3 +29,4 @@ function FancyArray(arr) {
     return this.arr[this.current];
   }
 }
+*/

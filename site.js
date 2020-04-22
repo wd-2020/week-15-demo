@@ -7,7 +7,11 @@ var slides = document.querySelector('.slides');
 
 slides.addEventListener('click', function(event) {
   if (event.target.tagName === 'IMG') {
-    slideshow.nextItem();
+    if (slideshow.playing) {
+      slideshow.pause();
+    } else {
+      slideshow.nextItem();
+    }
   }
 });
 

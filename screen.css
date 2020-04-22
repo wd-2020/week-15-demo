@@ -50,6 +50,13 @@ img {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   opacity: 0;
+  cursor: pointer;
+}
+.js .slides li[class] {
+  transition: opacity 3s;
+}
+.js .slides li.inactive {
+  opacity: 0;
 }
 .js .slides li.active {
   opacity: 1;

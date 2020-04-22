@@ -8,7 +8,15 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Begin site styles below */
 
+html {
+  font-family: Verdana, sans-serif;
+}
+
 h1 {
   font-size: 24px;
-  font-family: Verdana, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }

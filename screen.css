@@ -39,6 +39,25 @@ img {
 .slides img {
   border: 1px solid #222;
 }
+.controls {
+  margin-bottom: 1.3333333333em; /* 24 / 18 = 1.3333333333em */
+}
+.controls ul {
+  margin-top: 0.1666666667em; /* 3px / 18px */
+  display: flex;
+  flex: 1 0 100px;
+}
+.controls li {
+  margin-right: 0.6666666667em; /* 12 / 18 = 0.6666666667em */
+}
+.controls a {
+  display: block;
+  text-decoration: none;
+  color: #EEE;
+  background: #090;
+  line-height: 1;
+  padding: 0.3333333333em; /* 6px / 18px = 0.3333333333 */
+}
 
 /* State Styles */
 
@@ -64,6 +83,19 @@ img {
   cursor: pointer;
 }
 
+
+@media screen and (min-width: 430px) {
+  .js header {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .controls li {
+    margin-left: 0.6666666667em; /* 12 / 18 = 0.6666666667em */
+  }
+  .controls {
+    justify-self: end;
+  }
+}
 @media screen and (min-width: 790px) {
   .slides figure {
     display: grid;

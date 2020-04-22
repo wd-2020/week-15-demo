@@ -1,6 +1,7 @@
 document.querySelector('html').className = "js";
 
 var slideshow = new SlideShow('.slides li');
+slideshow.play();
 
 var slides = document.querySelector('.slides');
 

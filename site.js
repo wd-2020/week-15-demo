@@ -1,7 +1,38 @@
 document.querySelector('html').className = "js";
 
 var slideshow = new SlideShow('.slides li');
-slideshow.play();
+// slideshow.play();
+
+var controls = document.querySelector('.controls');
+controls.addEventListener('click', function(event) {
+  if (event.target.id === 'prev') {
+    event.preventDefault();
+    if (slideshow.playing) {
+      slideshow.pause();
+    }
+    slideshow.prevItem();
+  }
+  if (event.target.id === 'next') {
+    event.preventDefault();
+    if (slideshow.playing) {
+      slideshow.pause();
+    }
+    slideshow.nextItem();
+  }
+  if (event.target.id === 'play') {
+    event.preventDefault();
+    slideshow.nextItem(); // do something right away
+    slideshow.play();
+    event.target.id = 'pause';
+    event.target.innerText = 'Pause';
+  }
+  else if (event.target.id === 'pause') {
+    event.preventDefault();
+    slideshow.pause();
+    event.target.id = 'play';
+    event.target.innerText = 'Play';
+  }
+});
 
 var slides = document.querySelector('.slides');
 

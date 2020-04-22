@@ -1,5 +1,17 @@
 document.querySelector('html').className = "js";
 
+var slideshow = new SlideShow('.slides li');
+
+var slides = document.querySelector('.slides');
+
+slides.addEventListener('click', function(event) {
+  if (event.target.tagName === 'IMG') {
+    slideshow.nextItem();
+  }
+});
+
+
+
 function SlideShow(elements_selector) {
   this.elements = document.querySelectorAll(elements_selector);
   this.count = this.elements.length;
